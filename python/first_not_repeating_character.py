@@ -18,6 +18,8 @@ def main():
     assert first_not_repeating_character('abacabad') == 'c'
     assert first_not_repeating_character('abacabaabacaba') == '_'
 
+    print('All tests passed!')
+
 
 if __name__ == '__main__':
     main()
