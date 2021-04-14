@@ -3,19 +3,23 @@
 def first_duplicate(a):
     size = len(a)
 
+    # No duplicates
+    if len(set(a)) == size:
+        return -1
+
+    # There is at least one duplicate. Its largest index is the last index.
+    sec_occur_index = size - 1
+
     for i in range(size):
+        if i == sec_occur_index - 1:
+            break
         for j in range(i+1, size):
             if a[j] == a[i]:
-                try:
-                    if j < min_index:
-                        min_index = j
-                except NameError:
-                    min_index = j
+                if j < sec_occur_index:
+                    sec_occur_index = j
 
-    try:
-        return a[min_index]
-    except NameError:
-        return -1
+
+    return a[sec_occur_index]
 
 
 def main():
