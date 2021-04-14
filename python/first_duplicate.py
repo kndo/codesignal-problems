@@ -2,6 +2,7 @@
 
 def first_duplicate(a):
     """"O(n) time, O(n) space."""
+
     s = set()
 
     for v in a:
